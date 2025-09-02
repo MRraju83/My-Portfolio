@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="icon" type="image/x-con" href="image/RD-removebg-preview.png">
+    <title>Home page</title>
+
+
+    <style>
+        body{
+            background: linear-gradient(to top, black,#8B3103);
+            padding: 12.5px;
+        }
+        .container{
+            height: 85vh;
+            margin-top: 30px;
+            background-size: cover;
+            opacity: 1;
+            margin-left: 50px;
+            padding: 20px;
+            width: 180vh;
+            background-color:rgb(11, 1, 1);
+            border-radius: 30px;
+        }
+        .header{
+            color: #8B3103;
+            display: flex;
+            margin-left: 50px;
+            gap: 60px;
+            font-size: 17px;
+        }
+        .header span{
+            margin-left: 30px;
+            border: 2px outset;
+            padding: 6px;
+            transition: 2s ease;
+        }
+        .header span:hover{
+            transform: scale(0.8);
+        }
+        .header a{
+            position: relative;
+            left: 50%;
+            color: aliceblue;
+            text-decoration: none;
+        }
+        .header a:hover{
+            color: #8B3103;
+            transition: 1s ease;
+        }
+        .body{
+            display: flex;
+            justify-content: space-around;
+        }
+        .text{
+            color: aliceblue;
+            position: relative;
+            top: 140px;
+            left: -2%;
+            height: 60vh;
+            padding: 20px;
+            font-size: 30px;
+            width: 85vh;
+            font-style:normal;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+        .text span{
+            position: relative;
+            line-height: 40px;
+
+        }
+        .text p{
+            font-size: 20px; 
+            margin-top: 20px;
+        }
+        .text a{
+            position: relative;
+            top: 30px;
+            font-size: 30px;
+            justify-content: space-between;
+            gap: 10px;
+            color: #8B3103;
+        }
+        #icon:hover{
+            rotate: z -360deg;
+            transition: 2s ease;
+        }
+        button{
+            position: relative;
+            font-size: 25px;
+            top: 70px;
+            border: none;
+            border-radius: 10px;
+            background-color: #8B3103;
+            transition: 0.5s ease;
+            
+        }
+        button:hover{
+            box-shadow: 0 0 10px 10px #8B3103;
+        }
+        .image {
+            height: 50vh;
+            width: 45vh;
+            position: relative;
+            border-radius: 100%;
+            top: 136px;
+            background-color: #8B3103;
+            background-image: url(image/RD-removebg-preview.png);
+            background-size: cover;
+            box-shadow: 0px 15px 10px 0px #8B3103;
+            animation: Raju 4s infinite;
+            transition: transform 0.1s linear;
+        }
+
+        /* Pause the animation when not hovering */
+
+            .image:hover {
+                animation-play-state: paused;
+            }
+
+       
+
+        small{
+            color: #8B3103;
+            font-weight: 600;
+        }
+        @keyframes Raju {
+            0% { margin-top: 0%; }
+            50% { margin-top: -2%; }
+            100% { margin-top: 0%; }
+        }
+
+
+        .aa{
+            position:absolute;
+            color: aliceblue;
+            width: 20vw;
+            height: .6vh;
+            margin-top: 15%;
+            margin-left: 60px;
+            background-color: aliceblue;
+            z-index: -1;
+            animation: raju 5s infinite;
+        }
+        @keyframes raju {
+            0%{
+                background-color: red;
+            }
+            50%{
+                background-color: green;
+                margin-left: -50px;
+            }
+            100%{
+                background-color:white;
+            }
+        }
+
+        .bb{
+            position:absolute;
+            color: aliceblue;
+            width: 20vw;
+            height: .7vh;
+            margin-top: 12%;
+            margin-left: 60px;
+            background-color: aliceblue;
+            z-index: -1;
+            animation: raju1 5s infinite;
+        }
+        @keyframes raju1 {
+            0%{
+                background-color:green;
+            }
+            50%{
+                background-color: white;
+                margin-left: -50px;
+            }
+            100%{
+                background-color:red;
+            }
+        }
+
+        .cc{
+            position:absolute;
+            color: aliceblue;
+            width: 20vw;
+            height: .6vh;
+            margin-top: 9%;
+            margin-left: 60px;
+            background-color: aliceblue;
+            z-index: -1;
+            animation: raju2 5s infinite;
+        }
+        @keyframes raju2 {
+            0%{
+                background-color:white;
+            }
+            50%{
+                background-color: red;
+                margin-left: -50px;
+            }
+            100%{
+                background-color:green;
+            }
+        }
+
+        .line p{
+            position: absolute;
+            margin-top: 11%;
+            animation: mv 5s infinite;
+            margin-left: 60px;
+        }
+        @keyframes mv {
+            50%{margin-left: -5px;}
+        }
+
+
+        @media (max-width:550px) {
+            .container{
+                margin-left: 6;
+            }
+            
+        }
+
+
+
+        /* Responsive css add here for small size screen */
+        
+
+
+    </style>
+</head>
+<body>
+    <div class="main">
+        <!-- <div class="line">
+            <div class="aa"></div>
+            <p style="color: rgb(24, 1, 1);">INDIA</p>
+            <div class="bb"></div>
+            <div class="cc"></div>
+        </div> -->
+        <div class="container">
+            <div class="header">
+                <span>AR.</span>
+                <a href="" style="color: #8B3103;">Home</a>
+                <a href="skils.htm">Skils</a>
+                <a href="">Refrence</a>
+                <a href="">Contact</a>
+            </div>
+            <div class="body">
+                <div class="text">
+                    <span style="font-size: 24px; margin-top: 10px;">Hello, it's me</span><br>
+                    <span style="padding-top: 10px;">MR. raju</span><br>
+                    <span>And i'm <small>dotNet Full-stack devloper</small></span>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
+                         , in ipsa praesentium iste eveniet, 
+                         esse dolorem possimus reprehenderit debitis velit.</p>
+                    <a href=""><i class="fa-brands fa-instagram" id="icon"></i></a>
+                    <a href=""><i class="fa-brands fa-whatsapp" id="icon"></i></a>
+                    <a href=""><i class="fa-brands fa-facebook" id="icon"></i></a>
+                    <a href=""><i class="fa-brands fa-telegram" id="icon"></i></a><br>
+                    <button>Download cv</button>
+                </div>
+                <div class="image">
+
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+
+<script>
+const image = document.querySelector('.image');
+
+image.addEventListener('mousemove', (e) => {
+    const rect = image.getBoundingClientRect();
+    const x = e.clientX - rect.left; // Mouse X relative to image
+    const y = e.clientY - rect.top;  // Mouse Y relative to image
+
+    const moveX = (x - rect.width / 2) / 4;  // Adjust sensitivity
+    const moveY = (y - rect.height / 2) /4;
+
+    image.style.transform = `translate(${moveX}px, ${moveY}px)`;
+});
+
+image.addEventListener('mouseleave', () => {
+    image.style.transform = 'translate(0px, 0px)';
+});
+</script>
+
+</html>

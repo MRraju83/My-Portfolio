@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="icon" type="image/x-con" href="image1/RD-removebg-preview.png">
+    <title>Document</title>
+    <style>
+        body{
+            background: linear-gradient(to top, black,#8B3103);
+            padding: 12.5px;
+            /* background-color: orange; */
+        }
+        .container{
+            height: 85vh;
+            margin-top: 30px;
+            /* background-image: url(https://images.pexels.com/photos/14936128/pexels-photo-14936128.jpeg?cs=srgb&dl=pexels-ann-h-45017-14936128.jpg&fm=jpg); */
+            background-size: cover;
+            opacity: 1;
+            margin-left: 50px;
+            padding: 20px;
+            width: 180vh;
+            background-color:rgb(11, 1, 1);
+            /* box-shadow: 0 0 10px 0; */
+            border-radius: 30px;
+        }
+        .header{
+            color: #8B3103;
+            display: flex;
+            margin-left: 80px;
+            gap: 80px;
+            font-size: 17px;
+        }
+        .header a{
+            position: relative;
+            left: 50%;
+            height: 26px;
+            color: aliceblue;
+            text-decoration: none;
+        }
+        .header a:hover{
+            color: #8B3103;
+            transition: 1s ease;
+        }
+        .header span{
+            margin-left: 30px;
+            border: 2px outset;
+            padding: 6px;
+            transition: 2s ease;
+        }
+        .header span:hover{
+            transform: scale(0.8);
+        }
+        .container1{
+            display: flex;
+        }
+        .two{
+            height: 70vh;
+            /* background-image: url(https://img.freepik.com/free-photo/red-light-round-podium-black-background-mock-up_43614-950.jpg?size=626&ext=jpg); */
+            background-image: url(https://media.istockphoto.com/id/1408445036/photo/programming-web-pages-with-html-and-css-code-on-a-desktop-computer.webp?b=1&s=170667a&w=0&k=20&c=8bzVsHnZpYnd11a97dRNSgGuuzXMP3qA5zqTGB7j97c=);
+            background-size: contain;
+            background-color: rgb(25, 25, 25);
+            width: 50vh;
+            margin-top: 4%;
+            border-radius: 30px;
+            margin-left: 5%;
+            transition: transform 2.3s ease; 
+            box-shadow: 2px 0px 10px 0px #8B3103;
+        }
+        .two:hover {
+            opacity: 1;
+            /* transition: 2s ease-in-out; */
+            transform: translateX(50px);
+            /* transform: scale(1.05); Slightly enlarge */
+            /* margin-left: 8.5%; */
+            background-color:none;
+        }
+        .img{
+            height: 13vh;
+            width: 22.5vh;
+            margin: auto;
+            position: relative;
+            top: 72px;
+            border-radius: 2%;
+            /* border-radius: 100%; */
+            /* box-shadow: 0px 0px 10px 0px rgb(22, 21, 21); */
+            background-color: rgb(59, 59, 52);
+            background-image: url(image1/RD-removebg-preview.png);
+            background-size: 60%;
+            background-position: 30px;
+            background-repeat: no-repeat;
+        }
+        .two span{
+            color: rgb(167, 170, 173);
+            font-size:20px;
+            position: relative;
+            top: 40px;
+            left: 140px;
+        }
+        .two p{
+            color: rgb(200, 202, 204);
+            position: relative;
+            top: 60px;
+            left: 10px;
+            font-size: 16px;
+        }
+        .two button{
+            position: relative;
+            top: 20%;
+            left: 50px;
+        }
+
+        @keyframes Raju {
+            50%{margin-top: -2%}
+        }
+
+        .aa{
+            position:absolute;
+            color: aliceblue;
+            width: 20vw;
+            height: .6vh;
+            margin-top: 15%;
+            margin-left: 60px;
+            background-color: aliceblue;
+            z-index: -1;
+            animation: raju 5s infinite;
+        }
+        @keyframes raju {
+            0%{
+                background-color: red;
+            }
+            50%{
+                background-color: green;
+                margin-left: -50px;
+            }
+            100%{
+                background-color:white;
+            }
+        }
+
+        .bb{
+            position:absolute;
+            color: aliceblue;
+            width: 20vw;
+            height: .7vh;
+            margin-top: 12%;
+            margin-left: 60px;
+            background-color: aliceblue;
+            z-index: -1;
+            animation: raju1 5s infinite;
+        }
+        @keyframes raju1 {
+            0%{
+                background-color:green;
+            }
+            50%{
+                background-color: white;
+                margin-left: -50px;
+            }
+            100%{
+                background-color:red;
+            }
+        }
+
+        .cc{
+            position:absolute;
+            color: aliceblue;
+            width: 20vw;
+            height: .6vh;
+            margin-top: 9%;
+            margin-left: 60px;
+            background-color: aliceblue;
+            z-index: -1;
+            animation: raju2 5s infinite;
+        }
+        @keyframes raju2 {
+            0%{
+                background-color:white;
+            }
+            50%{
+                background-color: red;
+                margin-left: -50px;
+            }
+            100%{
+                background-color:green;
+            }
+        }
+        .line p{
+            position: absolute;
+            margin-top: 11%;
+            animation: mv 5s infinite;
+            margin-left: 60px;
+        }
+        @keyframes mv {
+            50%{margin-left: -5px;}
+        }
+
+        .three{
+            display: flex;
+            color: white;
+        }
+
+
+        @media (max-width:550px) {
+            .container{
+                margin-left: ;
+            }
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div class="line">
+            <div class="aa"></div>
+            <p style="color: rgb(24, 1, 1);">INDIA</p>
+            <div class="bb"></div>
+            <div class="cc"></div>
+        </div>
+        <div class="container">
+            <div class="header">
+                <span>AR</span>
+                <a href="portfolio.htm">Home</a>
+                <a href="" style="color: #8B3103;">Skills</a>
+                <a href="">Refrence</a>
+                <a href="">Contact</a>
+            </div>
+            <div class="container1">
+                 <div class="two">
+                    <div class="img">
+                    </div>
+                    <span>Hii I'm Raju</span>
+                    <p>Im a frontent devlopers with python backend.  Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                         Unde quos distinctio, illo est laborum necessitatibus blanditiis delectus sint,
+                         iure eaque neque tempore. Culpa magni adipisci repudiandae magnam quis rerum velit.</p>
+                         <button>no more <i class="fa-light fa-arrow-right"></i></button>
+                 </div>
+                 <div class="three">
+                    <span>Hello world</span>
+                 </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
