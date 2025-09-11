@@ -11,19 +11,22 @@
     <style>
         body{
             background: linear-gradient(to top, black,#8B3103);
-            padding: 12.5px;
+            padding: 10.5px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            gap: 20px;
         }
         .container{
             height: 85vh;
-            margin-top: 30px;
+            margin: 15px auto;
             background-size: cover;
-            opacity: 1;
-            margin-left: 50px;
             padding: 20px;
             width: 180vh;
             background-color:rgb(11, 1, 1);
             border-radius: 30px;
         }
+
         .header{
             color: #8B3103;
             display: flex;
@@ -132,6 +135,58 @@
             100% { margin-top: 0%; }
         }
 
+
+
+
+        /*                responsive design code for             */
+
+        @media (max-width:1400px){
+            .container{
+
+            margin: 15px auto;
+            width: 170vh;
+        }        
+    }
+        @media (max-width:1300px){
+            .container{
+
+            margin: 15px auto;
+            width: 160vh;
+        }
+    }
+        @media (max-width:1200px){
+            .container{
+
+            margin: 15px auto;
+            width: 150vh;
+        }
+    }
+        @media (max-width:1100px){
+            .container{
+            margin: 15px auto;
+            width: 140vh;
+        }
+        .header{
+            margin-left: 30px;
+            gap: 50px;
+        }
+
+    }
+        @media (max-width:1000px){
+            .container{
+            margin: 15px auto;
+            width: 130vh;
+        }
+        .header{
+            margin-left: 20px;
+            gap: 40px;
+        }
+        .text p{
+            margin-top: 20px;
+        }
+    }
+
+        
 
         .aa{
             position:absolute;
