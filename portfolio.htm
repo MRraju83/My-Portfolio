@@ -30,9 +30,7 @@
         .header{
             color: #8B3103;
             display: flex;
-            margin-left: 50px;
             gap: 60px;
-            font-size: 17px;
         }
         .header span{
             margin-left: 30px;
@@ -43,17 +41,26 @@
         .header span:hover{
             transform: scale(0.8);
         }
-        .header a{
+        .nav-links{
+            display: flex;
+            margin-left: 390px;
+            gap: 60px;
+            font-size: 17px;
+        }
+        .nav-links a{
             position: relative;
             left: 50%;
             color: aliceblue;
             text-decoration: none;
         }
+        .nav-links a:first-child {
+            color: #8B3103;
+        }
         .header a:hover{
             color: #8B3103;
             transition: 1s ease;
         }
-        .body{
+        .textpart{
             display: flex;
             justify-content: space-around;
         }
@@ -139,55 +146,212 @@
 
 
         /*                responsive design code for             */
+         /* Responsive css add here for small size screen */
 
         @media (max-width:1400px){
             .container{
-
             margin: 15px auto;
             width: 170vh;
         }        
     }
+    /*         2        */
         @media (max-width:1300px){
             .container{
-
             margin: 15px auto;
             width: 160vh;
         }
     }
+    /*                 3           */
         @media (max-width:1200px){
             .container{
-
             margin: 15px auto;
             width: 150vh;
         }
+        .nav-links a{
+            margin-left: -30px;
+            gap: 20px;
+        }
     }
+    /*            4            */
         @media (max-width:1100px){
             .container{
             margin: 15px auto;
             width: 140vh;
         }
-        .header{
-            margin-left: 30px;
-            gap: 50px;
+        .nav-links a{
+            margin-left: -30px;
+            gap: 20px;
         }
 
     }
+     /*                     5               */
         @media (max-width:1000px){
             .container{
             margin: 15px auto;
-            width: 130vh;
+            width: 125vh;
         }
-        .header{
-            margin-left: 20px;
-            gap: 40px;
+        .nav-links{
+            display: flex;
+            gap: 120px;
+        }
+        .nav-links a{
+            margin-left: -100px;
+        }
+        .text p{
+            margin-top: 20px;
+        }
+        .image{
+            margin:auto 40px;
+            background-size: 40vh 50vh;
+            height: 45vh;
+            width: 45vh;
+
+        }
+    }
+        /*               6           */
+
+     @media (max-width:900px){
+            .container{
+            margin: 15px auto;
+            width: 111vh;
+        }
+
+        .nav-links{
+            margin-left: 300px;
         }
         .text p{
             margin-top: 20px;
         }
     }
+ /*                 7              */
+    @media (max-width:750px){
+            .container{
+            margin: 15px auto;
+            width: 90vh;
+        }
+        .nav-links{
+            margin-left: 200px;
+        }
+        .text p{
+            margin-top: 20px;
+            font-size: 18px;
+        }
+        .image{
+            margin:auto 10px;
+            background-size: 30vh 40vh;
+            height: 40vh;
+            width: 52vh;
 
+        }
+        .text button{
+            position: relative;
+            top: 40px;
+            left: -8px;
+        }
         
+    }
 
+
+    /*              8                     */
+    @media (max-width:700px){
+            .container{
+            margin: 15px auto;
+            width: 80vh;
+        }
+       .nav-links{
+            margin-left: 110px;
+        }
+        .text p{
+            margin-top: 20px;
+            font-size: 16px;
+        }
+        .image{
+            margin:auto 10px;
+            background-size: 25vh 35vh;
+            height: 35vh;
+            width: 45vh;
+
+        }
+        .text button{
+            position: relative;
+            top: 40px;
+            left: -8px;
+            font-size: 20px;
+        }
+        
+    }
+/*                      9                */
+    @media (max-width:650px) {
+            .container{
+            margin: 15px auto;
+            width: 70vh;
+            height: fit-content;
+        }
+        .textpart{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .image {
+            position: relative;
+            top: -450px;
+            background-size: 25vh 30vh;
+            height: 30vh;
+            width: 26vh;
+        }
+        .text{
+            position: relative;
+            top: 200px;
+            left: 3%;
+            width: 85vw;
+        }
+        .menu-btn{
+            display: block;
+            position: relative;
+            left: 60%;
+            font-size: 30px;
+            cursor: pointer;
+            color: #8B3103;
+        }
+         .nav-links {
+            display: none;
+            position: absolute;
+            top: 100px;
+            right: 20px;
+            flex-direction: column;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            gap: 20px;
+        }
+
+        .nav-links a {
+            padding: 1px;
+            display: block;
+        }
+
+        /* Show when checked */
+        #menu-toggle:checked + .menu-btn + .nav-links {
+            display: flex;
+        }
+
+        /* Show hamburger button */
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*         
         .aa{
             position:absolute;
             color: aliceblue;
@@ -268,19 +432,10 @@
         }
         @keyframes mv {
             50%{margin-left: -5px;}
-        }
-
-
-        @media (max-width:550px) {
-            .container{
-                margin-left: 6;
-            }
-            
-        }
+        } */
 
 
 
-        /* Responsive css add here for small size screen */
         
 
 
@@ -297,28 +452,30 @@
         <div class="container">
             <div class="header">
                 <span>AR.</span>
-                <a href="" style="color: #8B3103;">Home</a>
-                <a href="skils.htm">Skils</a>
-                <a href="">Refrence</a>
-                <a href="">Contact</a>
+                <input type="checkbox" id="menu-toggle" hidden>
+                <label for="menu-toggle" class="menu-btn" hidden>&#9776;</label>
+                <div class="nav-links">
+                    <a href="">Home</a>
+                    <a href="skils.htm">About</a>
+                    <a href="">Projects</a>
+                    <a href="">Contact</a>
+                </div>
             </div>
-            <div class="body">
+            <div class="textpart">
                 <div class="text">
                     <span style="font-size: 24px; margin-top: 10px;">Hello, it's me</span><br>
-                    <span style="padding-top: 10px;">MR. raju</span><br>
-                    <span>And i'm <small>dotNet Full-stack devloper</small></span>
+                    <span style="padding-top: 10px;">Mr. Raju</span><br>
+                    <span>And I'm <small>dotNet Full-stack developer</small></span>
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
-                         , in ipsa praesentium iste eveniet, 
+                         , in ipsa praesentium iste eveniet,
                          esse dolorem possimus reprehenderit debitis velit.</p>
-                    <a href=""><i class="fa-brands fa-instagram" id="icon"></i></a>
-                    <a href=""><i class="fa-brands fa-whatsapp" id="icon"></i></a>
-                    <a href=""><i class="fa-brands fa-facebook" id="icon"></i></a>
+                    <a href=""><i class="fa-brands fa-instagram" id="icon" style="color: #dd2a7d;"></i></a>
+                    <a href=""><i class="fa-brands fa-whatsapp" id="icon" style="color:#25D366;"></i></a>
+                    <a href=""><i class="fa-brands fa-facebook" id="icon" style="color: #1877F2;"></i></a>
                     <a href=""><i class="fa-brands fa-telegram" id="icon"></i></a><br>
                     <button>Download cv</button>
                 </div>
-                <div class="image">
-
-                </div>
+                <div class="image"></div>
             </div>
         </div>
     </div>
