@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="icon" type="image/x-con" href="image/RD-removebg-preview.png">
+    <link rel="stylesheet" href="style.css">
+    <title>Home page</title>
+
+    <style>
+
+        /*                    css for about me sections      */
+
+        .project {
+            margin-top: 40px;
+            text-align: center;
+            color: white;
+        }
+        .project h2 {
+            font-size: 28px;
+            margin-bottom: 20px;
+            color: #8B3103;
+        }
+        .project-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            padding: 20px;
+        }
+        .project-card {
+            background: #111;
+            border: 2px solid #8B3103;
+            border-radius: 12px;
+            padding: 20px;
+            text-align: left;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0px 5px 15px rgba(139,49,3,0.6);
+        }
+        .project-card h3 {
+            color: #8B3103;
+            margin-bottom: 10px;
+        }
+        /*              summmary card css   */
+        .summary-grid p {
+            margin: 5px 0 0;
+            font-size: 15px;
+            color: #ccc;
+        }
+        
+
+       .live button {
+            margin-top: 15px;
+            padding: 10px 15px;
+            background-color: #8B3103;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: 0.5s ease;
+        }
+        .live button:hover {
+            box-shadow: 0 0 10px 10px #8B3103;
+        }
+
+        /* Bouncing animation for icons */
+        @keyframes bounceIcon {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-5px); }
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div class="container">
+            <!--        navbar     -->
+            <div class="header">
+                <span>AR.</span>
+                <input type="checkbox" id="menu-toggle" hidden>
+                <label for="menu-toggle" class="menu-btn" hidden>&#9776;</label>
+                <div class="nav-links">
+                    <a href="index.htm">Home</a>
+                    <a href="about.htm">About me</a>
+                    <a href="projects.htm">Projects</a>
+                    <a href="contact.htm">Contact</a>
+                </div>
+            </div>
+            <div class="project" id="project">
+                <h2>Projects</h2>
+                <div class="project-grid">
+                    <!-- Project 1 -->
+                    <div class="project-card">
+                        <h3><i class="fa-brands fa-apple"></i> Apple Clone (MERN Stack)</h3>
+                         <p style="font-size: 18px;">
+                            A fully functional <b style=" color: #8B3103">'Apple website clone'</b> developed using <b style="color: #8B3103;">MERN stack</b>,
+                            replicating the real Apple UI/UX with smooth transitions, modern product UI,
+                            and real e-commerce functionality.
+                        </p>
+                         <div>
+                            <div>
+                                <strong style="color: #8B3103; font-size: large;">Features:</strong><br>
+                                1. Cart system <br>
+                                2. Search functionality <br>
+                                3. Product Buy system <br>
+                                4. Payment Integration <br>
+                                5. Admin CRUD Operations <br>
+                                6. Authentication & Security
+                            </div>
+                            <div class="live">
+                                <a href="https://appleclonexyz.vercel.app/" target="_blank">
+                                    <button>Live Project</button>
+                                </a>
+                            </div>
+                         </div>
+                        <div style="color: #8B3103; font: 1em sans-serif; padding-top: 20px;">Timeline: Jan – March 2025</div>
+                    </div>
+
+
+                    <!-- Project 2 -->
+                    <div class="project-card">
+                        <h3><i class="fa-solid fa-book"></i> BookStore Web App (MERN + Java Eclipse)</h3>
+                        <p style="font-size: 18px;">
+                            A <b style="color: #8B3103;">Book Store E-commerce Website</b> created using MERN stack along with
+                            Java (Eclipse) modules for certain backend operations.
+                            Users can browse, search, and purchase books with a smooth UI experience.
+                        </p>
+                        <div>
+                            <strong style="color: #8B3103; font-size: large;">Features:</strong><br>
+                            1. Cart Management <br>
+                            2. Book Browsing UI <br>
+                            3. Search & Filters <br>
+                            4. Buy & Checkout <br>
+                            5. CRUD for Admin <br>
+                            6. MERN + Java backend integration
+                        </div>
+                        <div style="color: #8B3103; font: 1em sans-serif; padding-top: 20px;">Timeline: June – September 2025</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Footer Section -->
+            <footer class="footer">
+                <div class="footer-content">
+                    <h3>AR. Portfolio</h3>
+
+                    <div class="footer-social">
+                        <a href="#"><i class="fa-brands fa-github"></i></a>
+                        <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    </div>
+
+                    <hr />
+
+                    <p class="copyright">
+                        © 2025 AR. All Rights Reserved. | Made with ❤️ and MERN Stack
+                    </p>
+                </div>
+            </footer>
+    </div>
+</body>
+</html>

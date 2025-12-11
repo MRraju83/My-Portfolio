@@ -5,62 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="icon" type="image/x-con" href="image/RD-removebg-preview.png">
+    <link rel="stylesheet" href="style.css">
     <title>Home page</title>
 
 
     <style>
-        body{
-            background: linear-gradient(to top, black,#8B3103);
-            padding: 10.5px;
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-around;
-            gap: 20px;
-        }
-        .container{
-            height: 85vh;
-            margin: 15px auto;
-            background-size: cover;
-            padding: 20px;
-            width: 180vh;
-            background-color:rgb(11, 1, 1);
-            border: 4px solid white;
-            border-radius: 30px;
-           
-        }
-        .header{
-            color: #8B3103;
-            display: flex;
-            gap: 60px;
-        }
-        .header span{
-            margin-left: 30px;
-            border: 2px outset;
-            padding: 6px;
-            transition: 2s ease;
-        }
-        .header span:hover{
-            transform: scale(0.8);
-        }
-        .nav-links{
-            display: flex;
-            margin-left: 390px;
-            gap: 60px;
-            font-size: 17px;
-        }
-        .nav-links a{
-            position: relative;
-            left: 50%;
-            color: aliceblue;
-            text-decoration: none;
-        }
-        .nav-links a:first-child {
-            color: #8B3103;
-        }
-        .header a:hover{
-            color: #8B3103;
-            transition: 1s ease;
-        }
 
         /*                    css for about me sections      */
 
@@ -183,136 +132,6 @@
             0%, 100% { transform: translateY(0); }
             50% { transform: translateY(-5px); }
         }
-        
-
-        /*                responsive design code for             */
-         /* Responsive css add here for small size screen */
-
-        @media (max-width:1400px){
-            .container{
-            margin: 15px auto;
-            width: 170vh;
-        }        
-    }
-    /*         2        */
-        @media (max-width:1300px){
-            .container{
-            margin: 15px auto;
-            width: 160vh;
-        }
-    }
-    /*                 3           */
-        @media (max-width:1200px){
-            .container{
-            margin: 15px auto;
-            width: 150vh;
-        }
-        .nav-links a{
-            margin-left: -30px;
-            gap: 20px;
-        }
-    }
-    /*            4            */
-        @media (max-width:1100px){
-            .container{
-            margin: 15px auto;
-            width: 140vh;
-        }
-        .nav-links a{
-            margin-left: -30px;
-            gap: 20px;
-        }
-
-    }
-     /*                     5               */
-        @media (max-width:1000px){
-            .container{
-            margin: 15px auto;
-            width: 125vh;
-        }
-        .nav-links{
-            display: flex;
-            gap: 120px;
-        }
-        .nav-links a{
-            margin-left: -100px;
-        }
-    }
-        /*               6           */
-
-     @media (max-width:900px){
-            .container{
-            margin: 15px auto;
-            width: 111vh;
-        }
-
-        .nav-links{
-            margin-left: 300px;
-        }
-    }
- /*                 7              */
-    @media (max-width:750px){
-            .container{
-            margin: 15px auto;
-            width: 90vh;
-        }
-        .nav-links{
-            margin-left: 200px;
-        }
-        
-    }
-
-
-    /*              8                     */
-    @media (max-width:700px){
-            .container{
-            margin: 15px auto;
-            width: 80vh;
-        }
-       .nav-links{
-            margin-left: 110px;
-        }
-        
-    }
-/*                      9                */
-    @media (max-width:650px) {
-            .container{
-            margin: 15px auto;
-            width: 70vh;
-            height: fit-content;
-        }
-        .menu-btn{
-            display: block;
-            position: relative;
-            left: 60%;
-            font-size: 30px;
-            cursor: pointer;
-            color: #8B3103;
-        }
-         .nav-links {
-            display: none;
-            position: absolute;
-            top: 100px;
-            right: 20px;
-            flex-direction: column;
-            border: 1px solid #ccc;
-            border-radius: 6px;
-            gap: 20px;
-        }
-
-        .nav-links a {
-            padding: 1px;
-            display: block;
-        }
-
-        /* Show when checked */
-        #menu-toggle:checked + .menu-btn + .nav-links {
-            display: flex;
-        }
-
-        /* Show hamburger button */
-        }
-        
     </style>
 </head>
 <body>
@@ -324,10 +143,10 @@
                 <input type="checkbox" id="menu-toggle" hidden>
                 <label for="menu-toggle" class="menu-btn" hidden>&#9776;</label>
                 <div class="nav-links">
-                    <a href="portfolio.htm">Home</a>
-                    <a href="skils.htm">About me</a>
-                    <a href="">Projects</a>
-                    <a href="">Contact</a>
+                    <a href="index.htm">Home</a>
+                    <a href="about.htm">About me</a>
+                    <a href="projects.htm">Projects</a>
+                    <a href="contact.htm">Contact</a>
                 </div>
             </div>
             <div class="about" id="about">
@@ -344,10 +163,10 @@
                                 <span style="color:#E34C26; font-weight:bold;">Backend</span> technologies. 
                                 I enjoy building <strong>scalable</strong>, <strong>user-friendly</strong>, and 
                                 <strong>high-performance</strong> applications using 
-                                <span style="color:#f89820; font-weight:bold;">Java</span>, 
+                                <span style="color:#f89820; font-weight:bold;">Express</span>, 
                                 <span style="color:#61DBFB; font-weight:bold;">React.js</span>, 
                                 <span style="color:#68A063; font-weight:bold;">Node.js</span>, and 
-                                <span style="color:#512BD4; font-weight:bold;">ASP.NET</span>.
+                                <span style="color:#512BD4; font-weight:bold;">MongoDB</span>.
                                 <br><br>
                                 Along with my technical skills, I have developed strong 
                                 <strong>communication</strong> and <strong>teamwork abilities</strong>, enabling me to collaborate 
@@ -395,6 +214,19 @@
                                 <i class="fa-solid fa-code-branch" style="color:#F1502F;"></i>
                                 <span>Git</span>
                             </div>
+                            <div class="skill">
+                                <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mongodb/mongodb-original.svg" width="20"/>
+                                <span>MongoDB</span>
+                            </div>
+
+                            <div class="skill">
+                                <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/github/github-original.svg" width="25"/>
+                                <span>Github</span>
+                            </div>
+                            <div class="skill">
+                                <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/express/express-original.svg" width="25"/>
+                                <span>ExpressJS</span>
+                            </div>
                         </div>
                     </div>
 
@@ -434,6 +266,24 @@
                 </div>
             </div>
         </div>
+        <!-- Footer Section -->
+            <footer class="footer">
+                <div class="footer-content">
+                    <h3>AR. Portfolio</h3>
+
+                    <div class="footer-social">
+                        <a href="#"><i class="fa-brands fa-github"></i></a>
+                        <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    </div>
+
+                    <hr />
+
+                    <p class="copyright">
+                        © 2025 AR. All Rights Reserved. | Made with ❤️ and MERN Stack
+                    </p>
+                </div>
+            </footer>
     </div>
 </body>
 </html>

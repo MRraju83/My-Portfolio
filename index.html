@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="icon" type="image/x-con" href="image/RD-removebg-preview.png">
+    <link rel="stylesheet" href="style.css">
+    <title>Home page</title>
+
+
+    <style>
+        .textpart{
+            display: flex;
+            justify-content: space-around;
+        }
+        .text{
+            color: aliceblue;
+            position: relative;
+            top: 80px;
+            left: -2%;
+            height: 60vh;
+            padding: 20px;
+            font-size: 30px;
+            width: 80vh;
+            font-style:normal;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+        .text span{
+            position: relative;
+            line-height: 40px;
+
+        }
+        .text p{
+            font-size: 20px; 
+            margin-top: 20px;
+        }
+        .text a{
+            position: relative;
+            top: 20px;
+            font-size: 25px;
+            justify-content: space-between;
+            gap: 10px;
+            color: aliceblue;
+        }
+        #icon{
+             transition: 0.3s ease;
+        }
+        #icon:hover{
+            color: #8B3103;
+            transform: scale(1.2);
+        }
+        button{
+            position: relative;
+            font-size: 25px;
+            top: 40px;
+            left: -18px;
+            padding: 6px 10px;
+            border: none;
+            border-radius: 10px;
+            background-color: #8B3103;
+            transition: 0.5s ease;
+            
+        }
+        button:hover{
+            box-shadow: 0 0 10px 10px #8B3103;
+        }
+        .image {
+            height: 50vh;
+            width: 45vh;
+            position: relative;
+            border-radius: 100%;
+            top: 80px;
+            background-color: #8B3103;
+            background-image: url(image/RD-removebg-preview.png);
+            background-size: cover;
+            box-shadow: 0px 15px 10px 0px #8B3103;
+            animation: Raju 4s infinite;
+            transition: transform 0.1s linear;
+        }
+        @keyframes Raju {
+            0% { margin-top: 0%; }
+            50% { margin-top: -2%; }
+            100% { margin-top: 0%; }
+        }
+
+        /* Pause the animation when not hovering */
+
+            .image:hover {
+                animation-play-state: paused;
+            }
+
+       
+
+        small{
+            color: #8B3103;
+            font-weight: 600;
+        }
+
+        /* Show when checked */
+        #menu-toggle:checked + .menu-btn + .nav-links {
+            display: flex;
+        }
+
+
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div class="container">
+            <div class="header">
+                <span>AR.</span>
+                <input type="checkbox" id="menu-toggle" hidden>
+                <label for="menu-toggle" class="menu-btn" hidden>&#9776;</label>
+                <div class="nav-links">
+                    <a href="index.htm">Home</a>
+                    <a href="about.htm">About</a>
+                    <a href="projects.htm">Projects</a>
+                    <a href="contact.htm">Contact</a>
+                </div>
+            </div>
+            <div class="textpart">
+                <div class="text">
+                    <span style="font-size: 24px; margin-top: 10px;">Hello, it's me</span><br>
+                    <span style="padding-top: 10px;">Mr. Raju</span><br>
+                    <span>And I'm <small>MERN-stack developer</small></span>
+                    <p>
+                        A passionate Full Stack Web Developer skilled in building modern, scalable,  
+                        and high-performance applications using MERN Stack.  
+                        Always learning. Always improving.
+                    </p>
+                    <a href=""><i class="fa-brands fa-instagram" id="icon"></i></a>
+                    <a href=""><i class="fa-brands fa-whatsapp" id="icon"></i></a>
+                    <a href=""><i class="fa-brands fa-facebook" id="icon"></i></a>
+                    <a href=""><i class="fa-brands fa-telegram" id="icon"></i></a><br>
+                    <button>Download cv</button>
+                </div>
+                <div class="image"></div>
+            </div>
+        </div>
+        <!-- Footer Section -->
+            <footer class="footer">
+                <div class="footer-content">
+                    <h3>AR. Portfolio</h3>
+
+                    <div class="footer-social">
+                        <a href="#"><i class="fa-brands fa-github"></i></a>
+                        <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    </div>
+
+                    <hr />
+
+                    <p class="copyright">
+                        © 2025 AR. All Rights Reserved. | Made with ❤️ and MERN Stack
+                    </p>
+                </div>
+            </footer>
+    </div>
+</body>
+
+
+<script>
+const image = document.querySelector('.image');
+
+image.addEventListener('mousemove', (e) => {
+    const rect = image.getBoundingClientRect();
+    const x = e.clientX - rect.left; // Mouse X relative to image
+    const y = e.clientY - rect.top;  // Mouse Y relative to image
+
+    const moveX = (x - rect.width / 2) / 4;  // Adjust sensitivity
+    const moveY = (y - rect.height / 2) /4;
+
+    image.style.transform = `translate(${moveX}px, ${moveY}px)`;
+});
+
+image.addEventListener('mouseleave', () => {
+    image.style.transform = 'translate(0px, 0px)';
+});
+</script>
+
+</html>
