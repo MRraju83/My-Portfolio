@@ -103,6 +103,23 @@
             display: flex;
         }
 
+        /* Welcome Alert Styles */
+        #welcome-alert {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: #8B3103;
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            font-size: 24px;
+            text-align: center;
+            z-index: 1000;
+            display: none;
+            box-shadow: 0 0 10px rgba(63, 14, 14, 0.5);
+        }
+
 
     </style>
 </head>
@@ -160,6 +177,12 @@
                 </div>
             </footer>
     </div>
+
+    <!-- Welcome Alert -->
+    <div id="welcome-alert">
+        <h2>Welcome to my portfolio</h2>
+        <p>Dear viewer please opne this in desktop, this project develop for desktop only</p>
+    </div>
 </body>
 
 
@@ -180,6 +203,15 @@ image.addEventListener('mousemove', (e) => {
 image.addEventListener('mouseleave', () => {
     image.style.transform = 'translate(0px, 0px)';
 });
+
+// Welcome Alert Functionality
+window.onload = function() {
+    const alertDiv = document.getElementById('welcome-alert');
+    alertDiv.style.display = 'block';
+    setTimeout(() => {
+        alertDiv.style.display = 'none';
+    }, 10000); // 30 seconds
+};
 </script>
 
 </html>
